@@ -16,17 +16,17 @@ jobs:
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
-steps:
-      - name: Checkout codes
-        uses: actions/checkout@v2
-      - name: Setup Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.8'
-      - name: Prepare environment
-        run: pip install beautifulsoup4 lxml requests 
-      - name: Run app
-        run: python dailyFudan.py
-        env:
-          USERNAME: ${{ secrets.USERNAME }}
-          PASSWORD: ${{ secrets.PASSWORD }}
+    steps:
+          - name: Checkout codes
+            uses: actions/checkout@v2
+          - name: Setup Python
+            uses: actions/setup-python@v2
+            with:
+              python-version: '3.8'
+          - name: Prepare environment
+            run: pip install beautifulsoup4 lxml requests 
+          - name: Run app
+            run: python dailyFudan.py
+            env:
+              USERNAME: ${{ secrets.USERNAME }}
+              PASSWORD: ${{ secrets.PASSWORD }}
